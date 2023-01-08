@@ -613,7 +613,7 @@ footer h5 {
 }
 
 .image-section > span {
-    color: var(--white);
+    color: #fff;
     font-size: 2em;
     align-self: flex-end;
     margin: 0 .7em 1em 0;
