@@ -1,0 +1,809 @@
+
+:root {
+    /* Colors */
+    --light: #f4f4f4;
+    --dark: #272727;
+    --orange: #D87D4A;
+
+    /* Font-size */
+    --introH2: 1.8rem;
+    --introNav: .78rem;
+    --logoFs: 1.3rem;
+    --introTitleH3: 1.1rem;
+    --introTitleH1: 3rem;
+    --introTitlePara: 1rem;
+    --zx9H2: 3.5rem;
+    --zx9Para: 1rem;
+    --zx9Btn: .98rem;
+    --secondSpeakerH2: 1.8rem;
+    --thirdSpeakerBtn: .95rem;
+    --thirdSpeakerH2: 1.8rem;
+    --bestH2: 2.5rem;
+    --bestPara: .98rem;
+    --footerAnchor: .84rem;
+    --footerPara: .9rem;
+    --minAnchorFs: 1.5rem;
+
+    /* Width */
+    --mainWidth: 68rem;
+    --zx9Width: 26rem;
+    --introTitleWidth: 36%;
+    --minDivWidth: 20rem;
+    --minImgWidth: 13rem;
+    --thirdSpeakWidth: 40rem;
+
+    /* Height */
+    --zx9Height: 30rem;
+    --secondSpeakerHeight: 20rem;
+    --footerContHeight: 12rem;
+    --minImgWidth: 12rem;
+
+    /* Percentage */
+    --sideModal: 80%;
+}
+
+*, *::before, *::after {
+    text-decoration: none;
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    background-color: var(--dark);
+    font-family: Manrope;
+    position: relative;
+}
+
+body button {
+    cursor: pointer;
+}
+
+.main-container {
+    /* border: 1px solid var(--light); */
+    max-width: var(--mainWidth);
+    margin-inline: auto;
+    overflow: hidden;
+}
+
+.main-container .introduction {
+    max-width: 100%;
+    color: var(--light);
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10rem;
+    background-image: url('https://audiophile1818.netlify.app/static/media/image-header.13f7f18f.jpg');
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: 85%;
+    background-size: 45% 100%;
+    min-height: 45rem;
+}
+
+.main-container .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, .2);
+    padding-bottom: 1rem;
+}
+
+.main-container .header ul {
+    list-style: none;
+    display: flex;
+    gap: 4rem;
+    align-self: center;
+    transition: all .85s;
+    z-index: 9999999;
+}
+
+.header ul a {
+    color: var(--light);
+    font-size: var(--introNav);
+    letter-spacing: .08rem;
+    transition: all .1s;
+}
+
+.header ul a:hover {
+    color: var(--orange);
+}
+
+.header h2 {
+    font-size: var(--introH2);
+}
+
+.header i {
+    font-size: var(--logoFs);
+    align-self: center;
+    cursor: pointer;
+}
+
+.introduction .intro-title {
+    width: var(--introTitleWidth);
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.introduction .intro-title h3 {
+    font-weight: 100;
+    letter-spacing: .5rem;
+    font-size: var(--introTitleH3);
+    opacity: .9;
+}
+
+.introduction .intro-title h1 {
+    font-size: var(--introTitleH1);
+    line-height: 1;
+}
+
+.introduction .intro-title p {
+    font-size: var(--introTitlePara);
+}
+
+.introduction .intro-title button {
+    align-self: flex-start;
+    padding: .8rem 2rem;
+    margin-top: 1rem;
+    background-color: var(--orange);
+    border: none;
+    outline: none;
+    color: var(--light);
+}
+
+.intro-title button a {
+    color: var(--light);
+}
+
+.main-container .header > div {
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.header > div .fa-bars {
+    display: none;
+}
+
+.header .fa-x {
+    display: none;
+    font-size: 1.2rem;
+    align-self: flex-end;
+    margin-right: 2rem;
+}
+/* Product Section */
+
+.intro-products {
+    background-color: var(--light);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4rem;
+    padding-bottom: 3rem;
+}
+
+.intro-products .mini-product {
+    display: flex;
+    width: var(--mainWidth);
+    justify-content: space-between;
+    text-align: center;
+}
+
+.intro-products .mini-product .min > div {
+    background-color: #ddd;
+    min-height: 12rem;
+    width: var(--minDivWidth);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.intro-products .mini-product .min div .shop-text {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.intro-products .mini-product .min > div .shop-text a {
+    color: var(--orange);
+    font-size: var(--minAnchorFs);
+}
+
+.min > div .shop-text p {
+    align-self: center;
+}
+
+.intro-products .mini-product img {
+    max-width: var(--minImgWidth);
+    height: 12rem;
+    transform: translateY(6.5rem);
+}
+
+/* Add to cart */
+
+body .img-main-container div .delete-product span {
+    color: var(--light);
+    margin: 0;
+    font-weight: 200;
+    font-size: 1rem;
+}
+
+/* zx9 section */
+.intro-products .zx9-container {
+    max-width: var(--mainWidth);
+    background-color: var(--orange);
+    min-height: var(--zx9Height);
+    display: flex;
+    justify-content: center;
+    gap: 4.4rem;
+    overflow: hidden;
+}
+
+.intro-products .zx9-container img {
+    width: var(--zx9Width);
+    height: 35rem;
+    padding-top: 3rem;
+}
+
+.intro-products .zx9-container .zx9-text {
+    width: 32%;
+    color: var(--light);
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.zx9-container .zx9-text h2 {
+    font-size: var(--zx9H2);
+    line-height: 1.3;
+    font-weight: 400;
+}
+
+.zx9-container .zx9-text p {
+    font-size: var(--zx9Para);
+}
+
+.zx9-container .zx9-text button {
+    align-self: flex-start;
+    border: none;
+    outline: none;
+    background-color: var(--dark);
+    color: var(--light);
+    padding: .8rem 2rem;
+    font-size: var(--zx9Btn);
+    border-radius: 5px;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+/* Second Speaker section */
+
+.zx7-container {
+    background-image: url('https://audiophile1818.netlify.app/static/media/image-speaker-zx7.3d4940e8.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: var(--mainWidth);
+    min-height: var(--secondSpeakerHeight);
+
+    display: flex;
+    align-items: center;
+}
+
+.zx7-container .zx7-text {
+    margin-left: 6rem;
+}
+
+.zx7-container .zx7-text h2 {
+    font-size: var(--secondSpeakerH2);
+}
+
+.zx7-container .zx7-text button {
+    border: 1px solid var(--dark);
+    outline: none;
+    padding: .8rem 2rem;
+    margin-top: 1rem;
+    color: rgba(0,0,0,0.6);
+    cursor: pointer;
+}
+
+/* Third speaker section */
+
+.third-speaker {
+    display: flex;
+    width: var(--mainWidth);
+    justify-content: space-between;
+}
+
+.third-speaker > div {
+    background-color: #ddd;
+    width: 33rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.third-speaker > div button {
+    align-self: flex-start;
+    padding: .8rem 2rem;
+    border: 1px solid var(--dark);
+    outline: none;
+    cursor: pointer;
+    color: rgba(0,0,0,0.6);
+    font-size: var(--thirdSpeakerBtn);
+
+}
+
+.third-speaker > div > * {
+    margin-left: 2rem;
+}
+
+.third-speaker > div > h2 {
+    font-size: var(--thirdSpeakerH2);
+}
+
+/* Best Audio Section */
+
+.best-audio {
+    width: var(--mainWidth);
+    display: flex;
+    justify-content: space-between;
+}
+
+.best-audio img {
+    display: block;
+    max-width: 100%;
+}
+
+.best-audio .best-text {
+    align-self: center;
+    width: 43%;
+}
+
+.best-audio .best-text h2 {
+    font-size: var(--bestH2);
+}
+
+.best-audio .best-text h2 span {
+    color: var(--orange);
+}
+
+.best-audio .best-text p {
+    font-size: var(--bestPara);
+}
+
+/* Footer Section */
+footer {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   gap: 7rem;
+
+   max-width: 100%;
+   background-color: #000;
+   min-height: 23rem;
+   color: var(--light); 
+}
+
+footer .footer-headings {
+    width: 28rem;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    height: 14rem;
+    justify-content: space-between;
+    
+}
+
+footer .footer-headings p {
+    font-size: var(--footerPara);
+    line-height: 1.7;
+}
+
+footer .footer-navigations {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: var(--footerContHeight);
+}
+
+footer .footer-navigations ul {
+    display: flex;
+    list-style-type: none;
+    gap: 5rem;
+}
+
+footer .navigations {
+    align-self: flex-end;
+    display: flex;
+    gap: 3rem;
+}
+
+footer .navigations a {
+    color: var(--light);
+}
+
+footer .footer-navigations ul a {
+    font-size: var(--footerAnchor);
+    color: var(--light);
+}
+
+footer .footer-headings h3 {
+    font-weight: 100;
+}
+
+@media (max-width: 1175px) {
+    :root {
+        /* Intro Section */
+        --mainWidth: 90%;
+        --introTitleWidth: 24rem;
+    }
+}
+
+@media (max-width: 1107px) {
+
+    :root {
+        --minDivWidth: 100%;
+        --minImgWidth: 18rem;
+        --minImgHeight: 17rem;
+        --minAnchorFs: 2rem;
+
+        /* Best audio Section */
+        --bestH2: 3rem;
+    }
+
+    .intro-products .mini-product img {
+        height: var(--minImgHeight);
+    }
+
+    .intro-products .mini-product {
+        flex-direction: column;
+    }
+
+    .intro-products .mini-product .min > div {
+        margin-inline: auto;
+        min-height: 15rem;
+    }
+
+    .intro-products .mini-product img {
+        transform: translateY(9rem);
+    }
+
+    .min > div .shop-text p {
+        font-size: 1.3rem;
+    }
+
+    .intro-products .mini-product .min div > h3 {
+        font-size: 1.8rem;
+    }
+
+    /* Third Speaker Section */
+    .third-speaker {
+        flex-direction: column;
+        gap: 3rem;
+        align-items: center;
+    }
+
+    .third-speaker > img, 
+    .third-speaker > div  {
+        width: var(--thirdSpeakWidth);
+    }
+
+    .third-speaker > div {
+        min-height: 13rem;
+    }
+
+    .third-speaker > div > * {
+        margin-inline: auto;
+    }
+
+
+    /* Best audio Section */
+
+    .best-audio {
+        flex-direction: column;
+        align-items: center;
+        gap: 5rem;
+        text-align: center;
+    }
+
+    .best-audio .best-text  {
+        width: 80%;
+    }
+
+    .best-audio .best-text h2 {
+        margin-bottom: 2rem;
+        margin-top: 4rem;
+    }
+
+    .best-audio .best-text p {
+        line-height: 1.9;
+    }
+
+    .best-audio img {
+        max-width: 28rem;
+    }
+
+    /* Footer Section */
+
+    footer {
+        gap: 3rem;
+    }
+
+    footer .footer-navigations ul {
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 900px) {
+
+    :root {
+        /* Intro section */
+        --introTitleWidth: 65%;
+
+        /* Speakers Section */
+        --zx9Width: 17rem;
+    }
+
+    /* Intro Section */
+    .main-container .introduction {
+        background-position: center;
+        background-size: cover;
+        text-align: center;
+        position: relative;
+    }
+
+    .introduction .intro-title {
+        align-self: center;
+    }
+
+    .introduction .intro-title button {
+        align-self: center;
+    }
+
+
+
+    .main-container .header ul {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        justify-content: center;
+        align-items: flex-start;
+        padding-left: 2rem;
+
+        position: absolute;
+        inset: 5rem 0 0 var(--sideModal);
+        height: 23rem;
+        border: 1px solid #fff;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+        background-color: rgba(0,0,0,0.9);
+        margin-inline: 0;
+    }
+
+    .main-container .introduction .header > div {
+        align-self: center;
+        display: flex;
+        gap: 2rem;
+    }
+
+    .main-container .introduction .header > div .fa-bars {
+        font-size: 1.7rem;
+        display: block;
+    }
+
+    .main-container .header > * {
+        margin-inline: 2rem;
+    }
+
+    /* Navigation */
+
+    .main-container .header [data-visibility="true"] {
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    .main-container .header [data-visibility="false"] {
+        transform: translateX(15rem);
+    }
+
+    /* First Speaker Section */
+
+    .intro-products .zx9-container {
+        flex-direction: column;
+        overflow: visible;
+        margin-top: 5rem;
+        gap: 0;
+        padding-bottom: 4rem;
+    }
+
+    .intro-products .zx9-container img {
+        display: block;
+        margin-inline: auto;
+        height: auto;
+        transform: translateY(-8rem);
+    }
+
+    .intro-products .zx9-container .zx9-text {
+        text-align: center;
+        width: 80%;
+    }
+
+    .zx9-container .zx9-text button {
+        margin-inline: auto;
+    }
+}
+
+@media (max-width: 855px) {
+
+    :root {
+        --footerContHeight: 8rem;
+    }
+
+    /* Footer Section */
+    footer {
+        flex-direction: column;
+        padding-block: 2rem;
+        text-align: center;
+    }
+
+    footer h2 {
+        text-align: center;
+    }
+
+    footer .footer-headings {
+        width: 80%;
+        height: 13rem;
+    }
+
+    footer .footer-navigations {
+        width: 100%;
+    }
+
+    footer .footer-navigations ul {
+        width: 70%;
+        margin-inline: auto;
+        gap: 0;
+        justify-content: space-between;
+    }
+
+    footer .footer-navigations .navigations {
+        margin-inline: auto;
+    }
+
+    .header .fa-x {
+        margin-right: 1rem;
+    }
+
+}
+
+@media (max-width: 740px) {
+    :root {
+        --sideModal: 70%;
+        --thirdSpeakWidth: 90%;
+        --bestH2: calc(1rem + 3vw);
+    }
+
+    .best-audio .best-text p {
+        text-align: justify;
+    }
+
+    .header .fa-x {
+        margin-right: 1.5rem;
+    }
+}
+
+@media (max-width: 565px) {
+    :root {
+        --introH2: 1.6rem;
+        --introNav: .78rem;
+        --logoFs: 1.2rem;
+        --introTitleH3: .9rem;
+        --introTitleH1: 2.4rem;
+        --introTitlePara: .9rem;
+        --introTitleWidth: 90%;
+    }
+
+    .main-container .introduction {
+        background-position: center;
+        background-attachment: scroll;
+        background-size: cover;
+        text-align: center;
+        min-height: 42rem;
+    }
+
+    /* Best Audio Section */
+
+    .best-audio .best-text {
+        width: 97%;
+    }
+
+    .best-audio img {
+        display: block;
+        max-width: 22rem;
+    }
+}
+
+/* For mobile Devices */
+@media (max-width: 450px) {
+    :root {
+        --mainWidth: 100%;
+        --sideModal: 60%;
+
+        /* products */
+        --minImgWidth: 9rem;
+        --minImgHeight: 8rem;
+        --zx9H2: 1.9rem;
+        --zx9Para: .91rem;
+
+        /* Third Speaker  */
+        --thirdSpeakerH2: 1.4rem;
+        --thirdSpeakerBtn: .8rem;
+
+        /* Footer */
+        --footerContHeight: 6rem;
+    }
+
+    .header .fa-x {
+        margin-right: .9rem;
+    }
+
+    /* Products */
+
+
+    .intro-products .mini-product .min div > h3 {
+        font-size: 1.5rem;
+    }
+
+    body .zx7-container {
+        background-position: -30rem 0rem;
+    }
+
+    .intro-products {
+        --mainWidth: 90%;
+    }
+
+    .intro-products .mini-product .min {
+        height: 22rem;
+    }
+
+    /* First Speaker */
+
+    .intro-products .zx9-container {
+        gap: 3rem;
+    }
+    
+    .intro-products .zx9-container img {
+        transform: translateY(0);
+    }
+
+    /* Second speaker */
+    .zx7-container .zx7-text {
+        margin-inline: auto;
+    }
+
+    /* Best Audio Section */
+
+    .best-audio img {
+        max-width: 19rem;
+    }
+
+    /* Footer Section */
+
+    footer .footer-navigations ul {
+        width: 94%;
+    }
+
+    footer .footer-headings {
+        width: 94%;
+    }
+
+    footer .footer-headings p {
+        text-align: center;
+    }
+
+}
+

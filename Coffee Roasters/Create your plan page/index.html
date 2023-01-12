@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Fraunces:wght@400;700&display=swap" rel="stylesheet">
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/5a2d8f25c5.js" crossorigin="anonymous"></script>
+    <title>Create your plan</title>
+</head>
+<body>
+  <div class="main-container">
+    <!-- Header Section -->
+    <div class="header-img">
+        <div class="header-title">
+          <h2><i class="fa-solid fa-mug-hot"></i>Coffeeroasters</h2>
+          <i data-xBtn class="fa-solid fa-x"></i> 
+          <i data-menu class="fa-solid fa-bars"></i>
+            <ul class="navigation-list">
+              <li><a href="../index.html">HOME</a></li>
+              <li><a href="../About us page/about.html">ABOUT US</a></li>
+              <li><a href="">CREATE YOUR PLAN</a></li>  
+            </ul>
+        </div>
+        <div class="create-img">
+          <ul data-visibility="false">
+            <li><a href="../index.html">HOME</a></li>
+            <li><a href="../About us page/about.html">ABOUT US</a></li>
+            <li><a href="">CREATE YOUR PLAN</a></li>  
+          </ul>
+            <h1 class="create-title">Create a plan</h1>
+            <p class="create-para">Build a subscription plan that best fits your needs. We offer an assortment of the best artisan coffees from around the globe delivered fresh to your door.</p>
+          </div>
+        </div>
+
+        <!-- Tutorial Section -->
+    <div class="tutorial-container">
+      <div class="cards-dot">
+        <div class="circle-container">
+          <div class="circle circle-active"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <i class="dot-line"></i>
+        </div>
+      
+        <div class="numbered-card">
+            <div class="cards-numbered">
+              <h2>01</h2>
+              <h3>Pick your coffee</h3>
+              <p>Select from our evolving range of artisa coffees. Our beans are ethnically sourced and we pay fair prices for them. There are new coffees in all profiles every month for you to try out.</p>
+            </div>
+            <div class="cards-numbered">
+              <h2>02</h2>
+              <h3>Choose the frequency</h3>
+              <p>Customize your order frequency, quantity, even your roast style and grind type. Pause, skip or cancel your subscription with no commitment through our online portal.</p>
+            </div>
+            <div class="cards-numbered">
+              <h2>03</h2>
+              <h3>Receive and enjoy!</h3>
+              <p>We ship your package within 48 hours, freshly roasted. Sit back and enjoy award-winning world-class coffees curated to provide a distinct tasting experience.</p>
+            </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Creating section -->
+    <div class="create-form">
+      <div class="fixed-container">
+        <a href="#preference" >
+          <div data-preference-title class="title-form">
+          <h3 class="number-title active">01</h3>
+          <h3 class="text-title active">Preferences</h3>
+          </div>
+        </a>
+
+        <a href="#bean" >
+          <div data-bean-title class="title-form">
+            <h3 class="number-title">02</h3>
+            <h3 class="text-title">Bean Type</h3>
+          </div>
+        </a>
+        
+
+        <a href="#quantity" >
+          <div data-quantity-title class="title-form">
+            <h3 class="number-title">03</h3>
+            <h3 class="text-title">Quantity</h3>
+          </div>
+        </a>
+
+        <a href="#grind" >
+          <div data-grind-title class="title-form">
+            <h3 class="number-title">04</h3>
+            <h3 class="text-title">Grind option</h3>
+          </div>
+        </a>
+        
+        <a href="#deliveries" >
+          <div data-deliveries-title class="title-form">
+            <h3 class="number-title">05</h3>
+            <h3 class="text-title">deliveries</h3>
+          </div>
+        </a>
+      </div>
+
+      <div class="fillup-container">
+        <div class="dropdown-container">
+        <div id="preference" class="dropdown">
+          <div data-preference-title class="dropTitle">
+           <h2 data-pre data-question>How do you drink your coffee?</h2>
+           <span data-arrow>></span>
+          </div>
+
+          <div class="choices">
+
+            <div class="card">
+              <h3 data-title>Capsule</h3>
+              <p>Compatible with Nespresso systems and similar brewers</p>
+            </div>
+
+            <div class="card">
+                <h3 data-title>Filter</h3>
+                <p>For pour over or drip methods like Aeropress Chemex, and V60</p>
+            </div>
+
+            <div class="card">
+              <h3 data-title>Espresso</h3>
+              <p>Dense and finely ground beans for an intense, flavorful experience</p>
+            </div>
+
+          </div>
+        </div>
+        <div id="bean" class="dropdown">
+          <div class="dropTitle">
+            <h2 data-bean data-question>What type of coffee?</h2>
+            <span data-arrow>></span>
+           </div>
+ 
+           <div class="choices">
+
+             <div class="card">
+               <h3 data-title>Single Origin</h3>
+               <p>Distinct, high quality coffee form a specific family-owned farm</p>
+             </div>
+ 
+             <div class="card">
+                 <h3 data-title>Decaf</h3>
+                 <p>Just like regular coffee, except the caffeine has been removed</p>
+             </div>
+ 
+             <div class="card">
+               <h3 data-title>Blended</h3>
+               <p>Combination of two or three dark roasted beans of organic coffees</p>
+             </div>
+             
+            </div>
+          </div>
+
+        <div id="quantity" class="dropdown">
+          <div class="dropTitle">
+            <h2 data-quantity data-question>How much would you like ?</h2>
+            <span data-arrow>></span>
+           </div>
+ 
+           <div class="choices">
+
+             <div class="card">
+               <h3 data-title>250g</h3>
+               <p>perfect for the solo drinker. Yields about 12 delicious cups.</p>
+             </div>
+ 
+             <div class="card">
+                 <h3 data-title>500g</h3>
+                 <p>Perfect for a coule Yields about 40 delectable cups.</p>
+             </div>
+ 
+             <div class="card">
+               <h3 data-title>1000g</h3>
+               <p>Perfect for offices and events. Yields about 90 delightful cups</p>
+             </div>
+             
+            </div>
+        </div>
+
+        <div id="grind" class="dropdown">
+          <div class="dropTitle">
+            <h2 data-grind data-question>Want us to grind them?</h2>
+            <span data-arrow>></span>
+           </div>
+ 
+           <div class="choices">
+
+             <div class="card">
+               <h3 data-title>Whole bean</h3>
+               <p>Best choice if you cherish the full sensory experience</p>
+             </div>
+ 
+             <div class="card">
+                 <h3 data-title>Filter</h3>
+                 <p>For drip or pour-over coffee methods such as V60 or Aeropress.</p>
+             </div>
+ 
+             <div class="card">
+               <h3 data-title>Cafetiere</h3>
+               <p>Course ground beans specially suited for french press coffee</p>
+             </div>
+             
+            </div>
+        </div>
+
+        <div id="deliveries" class="dropdown">
+          <div class="dropTitle">
+            <h2 data-deliveries data-question>How often should we deliver?</h2>
+            <span data-arrow>></span>
+           </div>
+ 
+           <div class="choices price-card">
+
+             <div class="card">
+               <h3 data-title>Every week</h3>
+               <p><span data-price>$7.20</span> per shipment. Includes free first class shipping.</p>
+             </div>
+ 
+             <div class="card">
+                 <h3 data-title>Every 2 weeks</h3>
+                 <p><span data-price>$9.60</span> per shipment. Includes free priority shipping.</p>
+             </div>
+ 
+             <div class="card">
+               <h3 data-title>Every month</h3>
+               <p><span data-price>$12.00</span> per shipment. Includes free priority shipping.</p>
+             </div>
+             
+            </div>
+        </div>
+       </div>
+
+       <div class="summary-container">
+        <div class="order-summary">
+          <h3>ORDER SUMMARY</h3>
+          <p>"I drink my coffee as <span data-prespan>_____</span>, with a <span data-beanspan>_____</span> type of bean.  <span data-quantity>_____</span> ground ala <span data-grind>_____</span>, sent to me <span data-deliveries>_____</span>."</p>
+        </div>
+        <button class="create-btn">Create my plan!</button>
+       </div>
+
+      </div>
+    </div>
+
+      <!-- Checkout modal -->
+      <div data-off class="checkout-container">
+         <div class="modal">
+          <h2 class="order-sum">Order Summary</h2>
+          <div class="modal-text">
+            <h3 data-checkout-text>
+              "I drink my coffee as <span data-prespan>_____</span>, with a <span data-beanspan>_____</span> type of bean.  <span data-quantity>_____</span> ground ala <span data-grind>_____</span>, sent to me <span data-deliveries>_____</span>."
+            </h3>
+            <p>
+              Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.
+            </p>
+          </div>
+          <div class="amountButton">
+          <h2 data-amount></h2>
+          <button class="create-btn">Checkout</button>
+          </div>
+         </div>
+      </div>
+
+    <!-- Footer Section -->
+        
+    <footer>
+      <h2><i class="fa-solid fa-mug-hot"></i>Coffeeroasters</h2>
+      <ul>
+        <li><a href="../index.html">HOME</a></li>
+        <li><a href="../About us page/about.html">ABOUT US</a></li>
+        <li><a href="../Create your plan page/index.html">CREATE YOUR PLAN</a></li>   
+      </ul>
+      <div class="icons">
+         <a href=""><i class="fa-brands fa-square-facebook"></i></a>
+         <a href=""><i class="fa-brands fa-instagram"></i></a>
+         <a href=""><i class="fa-brands fa-twitter"></i></a> 
+      </div>  
+  </footer>
+
+  </div>
+</body>
+</html>

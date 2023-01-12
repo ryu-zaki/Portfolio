@@ -1,0 +1,567 @@
+
+:root {
+    /* Font size */
+    --createTitleH1: 4.5rem;
+    --createP: .96rem;
+    --fixedH3: 1.5rem;
+    --fillH2: 2.3rem;
+    --fillArrowFs: 2.4rem;
+    --cardFillH2: 1.5rem;
+    --fillParaFs: 1rem;
+    --summaryParaFs: 1.5rem;
+    --summaryH3: .9rem;
+    --modalOrderH2: 2.4rem;
+    --modalOrderH3: 1.6rem;
+    --modalPara: 1rem;
+
+    /* Width */
+   --createPwidth: 31rem;
+   --fixedWidth: 25rem;
+   --fillWidth: 80%;
+   --cardDropWidth: 16rem;
+   --checkOutWidth: 34rem;
+
+    /* Height 28*/
+   --createHeight: 28rem;
+   --tutorialHeight: 40rem;
+   --cardDropHeight: 15rem;
+   --orderSummaryHeight: 13rem;
+   --checkoutHeight: 45rem;
+   --checkOutHeight: 36rem;
+}
+
+
+
+body .main-container {
+    gap: 10rem;
+}
+
+.main-container .header-img,
+.tutorial-container,
+.create-form {
+    animation: intro 1.5s;
+}
+
+
+.main-container .create-img ul {
+    display: none;
+}
+
+.main-container .create-img {
+    background: url('https://images.pexels.com/photos/824201/pexels-photo-824201.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: var(--createHeight);
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: var(--light);
+    padding-left: 6rem;
+    row-gap: 2rem;
+    border-radius: 10px;
+}
+
+.main-container .create-img p {
+    width: var(--createPwidth);
+    font-size: var(--createP);
+    line-height: 1.73;
+    margin-bottom: 2rem;
+}
+
+.main-container .create-img h1 {
+    font-size: var(--createTitleH1);
+}
+
+body .main-container .fa-bars, 
+body .main-container .fa-x {
+    display: none;
+    transition: all .4s;
+}
+
+/* Tutorial section */
+.tutorial-container {
+    border: 1px solid #000;
+    background-color: var(--dark);
+    color: var(--light);
+    width: 100%;
+    min-height: var(--tutorialHeight);
+    
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body .tutorial-container .cards-dot {
+    justify-content: space-between;
+    width: 85%;
+}
+
+.tutorial-container .numbered-card .cards-numbered {
+    gap: 1.8rem;
+}
+
+.tutorial-container .numbered-card .cards-numbered p {
+    color: var(--light);
+}
+
+/* Creating a plan section */
+
+.create-form {
+    display: flex;
+    gap: 2rem;
+}
+
+.create-form .fixed-container {
+    width: var(--fixedWidth);
+    /* border: 1px solid #000;*/
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    height: 25rem;
+
+    position: sticky;
+    top: 1rem;
+}
+
+.create-form .fixed-container .title-form {
+    display: flex;
+    gap: 1.8rem; 
+    border-bottom: .5px solid rgba(0,0,0,0.2);
+    padding-bottom: 1.6rem;
+    width: 80%;
+    transition: all .2s;
+    cursor: pointer;   
+}
+
+
+.create-form .fixed-container .title-form:hover {
+    padding-left: .5rem;
+}
+
+.create-form .fixed-container .title-form .number-title.active {
+    color: var(--green);
+    opacity: 1;
+}
+
+.create-form .fixed-container .title-form .text-title.active {
+    color: var(--dark);
+    opacity: 1;
+}
+
+
+.create-form .fixed-container .title-form > h3 {
+    font-size: var(--fixedH3);
+    color: var(--dark);
+    opacity: .4;
+    transition: all .2s;
+}
+
+.fillup-container {
+    width: var(--fillWidth);
+}
+
+.fillup-container .dropdown-container {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.fillup-container .dropdown-container .dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+.dropdown-container .dropdown .choices {
+    display: flex;
+    justify-content: space-between;
+}
+
+.dropdown-container .dropdown .choices {
+    display: none;
+}
+
+.dropdown-container .dropdown .choices.active-choices {
+    display: flex;
+}
+
+
+.dropdown .choices .card {
+    width: var(--cardDropWidth);
+    min-height: var(--cardDropHeight);
+    background-color: #eee;
+    border-radius: 10px;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    padding-bottom: .6rem;
+}
+
+.dropdown .choices .card:hover {
+    background-color: var(--pink);
+}
+
+.dropdown .choices .card.active-card {
+    background-color: var(--green);
+    color: var(--light);
+}
+
+.choices .card h3 {
+    margin: 2rem 0 1rem 2rem;
+    font-size: var(--cardFillH2);
+}
+
+.choices .card p {
+    margin-left: 2rem;
+    font-size: var(--fillParaFs);
+    width: 85%;
+}
+
+.fillup-container .dropdown-container .dropTitle {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.fillup-container .dropdown-container .dropTitle .active-dropTitle {
+    opacity: 1;
+}
+
+.dropdown-container .dropTitle h2 {
+    color: var(--dark);
+    font-size: var(--fillH2);
+    opacity: .5;
+    transition: all .2s;
+    align-self: center;
+}
+
+.dropdown-container .dropTitle span {
+    color: var(--green);
+    font-size: var(--fillArrowFs);
+    font-weight: 900;
+    transition: all .2s;
+}
+
+.dropdown-container .dropTitle span.active-dropArrow {
+    transform: rotate(90deg);
+}
+
+/*Summary card*/
+
+.summary-container {
+    margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.summary-container .order-summary {
+    background-color: var(--dark);
+    min-height: var(--orderSummaryHeight);
+    border-radius: 10px;
+    color: var(--light);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.order-summary p {
+    font-size: var(--summaryParaFs);
+    margin-left: 4rem;
+    width: 75%;
+    font-weight: 900;
+}
+
+.order-summary h3 {
+    margin-left: 4rem;
+    margin-bottom: 1.4rem;
+    font-weight: 100;
+    opacity: .7;
+    font-size: var(--summaryH3);
+}
+
+.order-summary span {
+    color: var(--green);
+}
+
+.summary-container .create-btn {
+    align-self: flex-end;
+    background-color: #bbb;
+    cursor: not-allowed;
+}
+
+.summary-container .create-btn:hover {
+    transform: scale(1);
+}
+
+.summary-container .create-btn.active-createBtn {
+    background-color: var(--green);
+    cursor: pointer;
+}
+
+.summary-container .create-btn.active-createBtn:hover {
+    transform: scale(1.05);
+}
+
+/* Checkout modal */
+
+.checkout-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: var(--checkoutHeight);
+
+    position: fixed;
+    inset: 0 0 0 0;
+    background-color: rgba(0,0,0,0.2);
+    z-index: 100;
+    transition: all .4s;
+}
+
+.checkout-container[data-off] {
+    transform: scale(0);
+}
+
+.checkout-container[data-on] {
+    transform: scale(1);
+}
+
+.checkout-container .modal {
+    width: var(--checkOutWidth);/* 34rem; */
+    min-height: var(--checkOutHeight);/* 36rem; */
+    background-color: var(--light);
+    color: var(--dark);
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.checkout-container .modal .order-sum { 
+    font-size: var(--modalOrderH2);
+    background-color: var(--dark);
+    color: var(--light);
+    border-radius: 10px 10px 0 0;
+    padding: 3rem;
+}
+
+.checkout-container .modal .modal-text {
+    width: 84%;
+    line-height: 1.7;
+    margin-inline:  auto;
+}
+
+.checkout-container .modal p {
+    font-size: var(--modalPara);
+}
+
+.modal .modal-text h3 {
+    opacity: .7;
+    font-size: var(--modalOrderH3);
+    margin-bottom: 1rem;
+}
+
+.modal .modal-text h3 span {
+    color: var(--green);
+    opacity: 1;
+}
+
+.modal .amountButton {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 3rem;
+    gap: 4rem;
+}
+
+.modal .amountButton h2 {
+    align-self: center;
+}
+
+/* Media queries */
+
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --createTitleH1: 3rem;
+        --createPwidth: 25rem;
+        --fixedWidth: 20rem;
+        --fillH2: 2rem;
+        --fillArrowFs: 2rem;
+        --cardFillH2: 1.2rem;
+        --fillParaFs: .9rem;
+        --cardDropWidth: 13rem;
+        --cardDropHeight: 12rem;
+        --fixedH3: 1.4rem;
+
+        --summaryParaFs: 1.3rem;
+        --summaryH3: .8rem;
+        --orderSummaryHeight: 11rem;
+    }
+
+    .main-container .create-img {
+        gap: 1.4rem;
+    }
+
+    /* Creating a plan section */
+
+    .create-form {
+        gap: 0rem;
+    }
+}
+
+@media screen and (max-width: 1026px) {
+    :root {
+        --createHeight: 25rem;
+        --fillH2: 2.3rem;
+        --fillArrowFs: 2.4rem;
+        --cardFillH2: 1.5rem;
+        --fillParaFs: 1rem;
+        --fillWidth: 98%; 
+
+        --cardDropWidth: 16rem;
+        --cardDropHeight: 15rem;
+    }
+
+    .main-container .create-img {
+        padding-left: 4rem;
+    }
+
+    .create-form .fixed-container {
+        display: none;
+    }
+
+    .create-form .fillup-container {
+        display: block;
+        margin-inline: auto;
+    }
+
+}
+
+@media screen and (max-width: 770px) {
+
+    :root {
+        --createPwidth: 95%;
+        --createTitleH1: 3rem;
+
+        /* Tutorial */
+        --tutorialHeight: 68rem;
+
+        /* Create */
+        --cardDropWidth: 100%;
+        --cardDropHeight: 8rem;
+        --fillH2: calc(1.9vw + 1rem);
+        --fillArrowFs: 2.1rem;
+        --cardFillH2: 1.1rem;
+        --fillParaFs: .97rem;
+    }
+
+    .main-container .create-img {
+        padding-left: 0;
+        text-align: center;
+        align-items: center;
+    }
+
+    .main-container .create-img ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .main-container .tutorial-container {
+        width: auto;
+        margin-left: 0;
+    }
+
+    .tutorial-container .numbered-card {
+        gap: 3rem;
+    }
+
+    /* Creating a plan section */
+
+    .dropdown-container .dropdown .choices {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+}
+
+@media screen and (max-width: 616px) {
+    :root {
+        --checkOutWidth: 30rem;
+        --modalOrderH2: 2rem;
+        --modalOrderH3: 1.4rem;
+        --modalPara: .9rem;
+        --checkOutHeight: 33rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    :root {
+        --tutorialHeight: 82rem;
+
+        /* Create */
+        --fillH2: 1.2rem;
+        --fillArrowFs: 2.1rem;
+        --cardFillH2: 1rem;
+        --fillParaFs: .9rem;
+        --summaryParaFs: 1.03rem;
+        --orderSummaryHeight: 9rem;
+        --cardDropHeight: 7rem;
+
+        --checkOutWidth: 95%;
+        --modalOrderH2: 1.8rem;
+        --modalOrderH3: 1.2rem;
+        --modalPara: .9rem;
+        --checkOutHeight: 35rem;
+    }
+
+    .summary-container .order-summary {
+        padding-block: 1rem;
+    }
+
+    .summary-container .order-summary p {
+        margin-left: 0;
+        align-self: center;
+    }
+
+    .summary-container .order-summary h3 {
+        margin-left: 3rem;
+    }
+
+    .fillup-container .dropdown-container .dropdown {
+        gap: 2rem;
+    }
+
+    body .main-container {
+        gap: 7rem;
+    }
+
+    .summary-container {
+        margin-top: 5rem;
+    }
+
+    .checkout-container .modal .order-sum {
+        padding-left: 1.8rem;
+    }
+
+    .modal .amountButton {
+        width: 100%;
+        justify-content: space-around;
+        gap: 0;
+    }
+
+    .modal .amountButton button {
+        transform: scale(.8);
+    }
+
+    .modal .amountButton h2 {
+        font-size: 1rem;
+    }
+}
+

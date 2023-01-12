@@ -1,0 +1,679 @@
+
+:root {
+
+    /* Colors */
+    --gray: #ddd;
+
+    /* Font size */
+    --newFs: 1rem;
+    --descH2: 2rem;
+    --descPara: .9rem;
+    --numberFs: 1.1rem;
+    --featuresPara: .87rem;
+    --likeTextH3: 1.2rem;
+    --delBtn: .9rem;
+
+    /* Width */
+    --productImgWidth: 34rem;
+    --addProWidth: 7.5rem;
+    --featuresWidth: 50.4%;
+    --cartWidth: 23rem;
+    --sec4ImgWidth: 21.5rem;
+    --sec4ImgHeight: 20rem;
+
+
+    /* Height */
+    --productImgHeight: 30rem;
+    --cartHeight: 15rem;
+    --overlayHeight: 97%;
+
+    /* Padding / Margin */
+    --padding-cart: 6rem;
+}
+
+body {
+    background-color: var(--dark);
+}
+
+.main-container .introduction .header li a {
+    font-weight: 500;
+}
+
+.main-container {
+    height: 5rem;
+    padding-top: 1rem;
+}
+
+.section-container {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-block: 5rem;
+    gap: 3rem;
+}
+
+.intro-products {
+    width: var(--mainWidth);
+    background-color: transparent;
+    margin-inline: auto;
+}
+
+.intro-products .mini-product {
+    margin-inline: auto;
+}
+
+/* Section One */
+
+.section1 {
+    max-width: var(--mainWidth);
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.section1 a {
+    color: #000;
+}
+
+.section1 .product {
+    display: flex;
+    gap: 4rem;
+}
+
+.section1 .product img {
+    max-width: var(--productImgWidth);
+    min-height: var(--productImgHeight);
+}
+
+.section1 .product .description-price {
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    gap: .7rem;
+}
+
+.description-price h3 {
+    color: var(--orange);
+    letter-spacing: .3rem;
+    font-size: var(--newFs);
+    font-weight: 400;
+}
+
+.description-price h2 {
+    font-size: var(--descH2);
+}
+
+.description-price p {
+    font-size: var(--descPara);
+}
+
+.description-price > span {
+    font-weight: 800;
+}
+
+.description-price .price-addBtn {
+    display: flex;
+    gap: 2rem;
+}
+
+.add-cart-msg {
+    color: #27ae60;
+    /* text-align: center; */
+    width: 65%;
+    display: none;
+    font-weight: 540;
+}
+
+.add-product {
+    width: var(--addProWidth);
+    background-color: var(--gray);
+    align-self: center;
+    padding: .2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+ .add-product > span {
+    font-size: var(--numberFs);
+    padding-block: .2rem;
+    padding-inline: .6rem;
+    color: #000;
+    font-weight: 400;
+}
+
+[data-subs],
+[data-adds] {
+    cursor: pointer;
+}
+
+.price-addBtn button {
+    background-color: var(--orange);
+    outline: none;
+    border: none;
+    color: var(--light);
+    padding: .7rem 2.3rem; 
+}
+
+/* Features Section */
+
+.section2 {
+    max-width: var(--mainWidth);
+    display: flex;
+    gap: 6.5rem;
+}
+
+.section2 .features {
+    width: var(--featuresWidth);
+}
+
+.section2 .features p {
+    font-size: var(--featuresPara);
+    line-height: 1.7;
+}
+
+.section2 h3 {
+    font-size: 1rem;
+    margin-bottom: .7rem;
+}
+
+.section2 .in-box p {
+    font-size: var(--featuresPara);
+    line-height: 1.9;
+}
+
+.section2 .in-box p span {
+    color: var(--orange);
+    margin-right: 1rem;
+    font-weight: 900;
+}
+
+
+/* Section three */
+.section3 {
+    max-width: var(--mainWidth);
+    display: grid;
+    grid-template-areas: 'img1 img3' 'img2 img3';
+    gap: 1rem;
+}
+
+.section3 .img1 {
+    grid-area: img1;
+}
+
+.section3 .img2 {
+    grid-area: img2;
+}
+
+.section3 .img3 {
+    grid-area: img3;
+    height: 36rem;
+}
+
+/* Section Four */
+.section4 {
+    width: var(--mainWidth);
+}
+
+.section4 > h3 {
+    font-size: 1.1rem;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.section4 .images {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100%;
+}
+
+.section4 .images img {
+    width: var(--sec4ImgWidth);
+    height: var(--sec4ImgHeight);
+}
+
+.section4 .images .like-text {
+    text-align: center;
+}
+
+.images .like-text h3 {
+    font-size: var(--likeTextH3);
+    color: var(--orange);
+    margin: 1rem 0 .5rem 0;
+}
+
+.images .like-text button {
+    color: var(--light);
+    background-color: var(--orange);
+    padding: .8rem 2rem;
+    border: none;
+    outline: none;
+}
+
+/* Add to Cart Modal */
+
+.overlay-cart {
+    position: absolute;
+    inset: 6rem 0 0 0;
+    background-color: rgba(0,0,0,0.9);
+    height: var(--overlayHeight);
+    z-index: 900;
+    display: none;
+    /* display: flex; */
+    justify-content: flex-end;
+    align-items: flex-start;
+    padding-right: var(--padding-cart);
+}
+
+.overlay-cart .cart-card {
+    background-color: var(--light);
+    width: var(--cartWidth);
+    min-height: var(--cartHeight);
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.7rem;
+
+    position: static;
+    top: 2rem;  
+}
+
+.cart-card button:nth-child(1) {
+    align-self: flex-end;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.cart-card > button h3 {
+    color: var(--orange);
+    font-size: 1.2rem;
+}
+
+.cart-card .img-main-container {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+}
+
+.cart-card .img-main-container > div {
+    width: 100%;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--dark);
+    padding-bottom: .9rem;
+    display: none;
+} 
+
+.cart-card .inner-img {
+    display: flex;
+    gap: .8rem;
+}
+
+ .inner-img > div {
+    display: flex;
+    flex-direction: column;
+}
+
+ .inner-img > div p, 
+ .inner-img > div span {
+    font-size: .9rem;
+}
+
+ .delete-product {
+    align-self: center;
+    cursor: pointer;
+    color: var(--light);
+    background-color: var(--orange);
+    padding: .2rem .9rem;
+    font-size: var(--delBtn);
+}
+
+.inner-img > img {
+    align-self: center;
+}
+
+.img-section .add-product {
+    width: 6rem;
+    align-self: center;
+    transform: scale(.9);
+}
+
+.cart-card .total-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.total-section > h2 {
+    font-weight: 400;
+    font-size: 1.1rem;
+}
+
+.overlay-cart .checkout-btn {
+    padding-block: .8rem;
+    border: none;
+    outline: none;
+    color: var(--light);
+    background-color: var(--orange);
+}
+
+.overlay-cart .checkout-btn a {
+    color: var(--light);
+}
+
+[data-count] {
+    color: var(--orange);
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: .6rem;
+}
+
+.img-main-container span {
+    color: var(--orange);
+    font-size: 1.4rem;
+    font-weight: 900;
+    
+}
+
+.img-main-container span > span:nth-child(2) {
+    margin-left: .7rem;
+}
+
+footer {
+    width: 100%;
+}
+
+section button a {
+    color: var(--light);
+}
+/* Responsive mode */
+@media (max-width: 1206px) {
+    :root {
+        /*Section 3  28rem*/
+       --img1Width: 25rem;
+       --img2Width: 25rem;
+       --img3Width: 30rem;
+       --img3Height: 33rem;
+
+       /* Section 4 */
+       --sec4ImgWidth: 18.5rem;
+       --sec4ImgHeight: 17rem;
+
+       /* Add to cart */
+       --padding-cart: 2rem;
+    }
+
+    .section3 img:nth-child(1) {
+        width: var(--img1Width);
+    }
+
+    .section3 img:nth-child(2) {
+        width: var(--img2Width);
+    }
+
+    .section3 img:nth-child(3) {
+        width: var(--img3Width);
+        height: var(--img3Height);
+    }
+
+}
+
+
+@media(max-width: 1070px) {
+    :root {
+        /* section 1 */
+        --productImgWidth: 28rem;
+        --productImgHeight: 24rem;
+        --newFs: .9rem;
+        --descH2: 1.7rem; 
+        --numberFs: 1rem;
+
+        /* Section 4 */
+       --sec4ImgWidth: 15.5rem;
+       --sec4ImgHeight: 14rem;
+       --likeTextH3: 1rem;
+    }
+
+    /* Section 1 */
+    .section1 .product {
+        gap: 1.7rem;
+    }
+
+    /* Section 4 */
+    .images .like-text button {
+        padding: .8rem 1.3rem;
+    }
+}
+
+@media (max-width: 985px) {
+    :root {
+        --img1Width: 21rem;
+        --img2Width: 21rem;
+        --img3Width: 26rem;
+        --img3Height: 27.6rem;
+    }
+}
+
+@media (max-width: 885px) {
+    :root {
+
+        /* Section 1 */
+        --productImgWidth: 24rem;
+        --productImgHeight: 20rem;
+        --addProWidth: 6rem;
+
+        /* Section 2 */
+        --featuresWidth: 60.4%;
+
+        /* Section 3 */
+        --img1Width: 18rem;
+        --img2Width: 18rem;
+        --img3Width: 23rem;
+        --img3Height: 24rem;
+
+        /* Section 4 */
+       --sec4ImgWidth: 13.5rem;
+       --sec4ImgHeight: 12rem;
+
+       /* Add to cart */
+       --overlayHeight: 98%;
+       
+    }
+  
+    .price-addBtn button {
+        padding: .5rem 1.5rem;
+        font-size: .8rem;
+    }
+
+    .description-price .price-addBtn {
+        gap: 1rem;
+    }
+
+    /* Section 2 */
+    .section2 {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 745px) {
+
+    :root {
+        /* Section 1 */
+        --newFs: 1rem;
+        --descH2: 2rem;
+        --descPara: .9rem;
+        --numberFs: 1.1rem;
+        --addProWidth: 7.5rem;
+        --descWidth: 70%;
+
+        /* Section 3 */
+        --img1Width: 17rem;
+        --img2Width: 17rem;
+        --img3Width: 100%;
+        --img3Height: 25rem;
+
+        /* Section 4 */
+        --sec4ImgWidth: 24.5rem;
+        --sec4ImgHeight: 23rem;
+        --likeTextH3: 1.6rem;
+
+        /* Add to cart */
+        --overlayHeight: 99%;
+    }
+
+    .section-container {
+        gap: 5rem;
+    }
+
+    /* Section 1 */
+    .section1 .product {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .description-price .price-addBtn {
+        margin-inline: auto;
+    }
+
+    .description-price .price-addBtn {
+        gap: 2rem;
+    }
+
+    .price-addBtn button {
+        padding: .7rem 2.3rem; 
+        font-size: .9rem;
+    }
+
+    .section1 .product .description-price {
+        width: var(--descWidth);
+        gap: 1.5rem;
+    }
+
+    /* Section 3 */
+    .section3 {
+        grid-template-areas: 'img1 img2' 'img3 img3';
+    }
+
+    /* section 4 */
+    .section4 .images {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .images .like-text button {
+        padding: .8rem 2rem;
+    }
+}
+
+@media (max-width: 633px) {
+    :root {
+        /* Section 2 */
+        --featuresWidth: 100%;
+
+        /* Section 3 */
+        --img1Width: 12rem;
+        --img2Width: 12rem;
+        --img3Height: 20rem;
+
+        /* Add to cart */
+        --cartWidth: 18rem;
+        --cartHeight: 10rem;
+    }
+
+    /* Section 2 */
+    .section2 {
+        flex-direction: column-reverse;
+        align-items: center;
+        width: 80%;
+    }
+
+    .section2 .in-box {
+        align-self: flex-start;
+       
+    }
+
+    .section2 .features p {
+        text-align: justify;
+    }
+
+    /* Add to cart */
+    body .img-main-container div .delete-product span  {
+        font-size: .9em;
+        padding: 0;
+    }
+
+
+}
+
+@media (max-width: 517px) {
+    :root {
+        --descWidth: 90%;
+    }
+}
+
+@media (max-width: 450px) {
+
+    :root {
+        --productImgWidth: 20rem;
+        --productImgHeight: 16rem;
+
+        /* Section 3 */
+        --img1Width: 11rem;
+        --img2Width: 11rem;
+        --img3Width: 100%;
+        --img3Height: 20rem;
+
+        /* Section 4 */
+        --sec4ImgWidth: 18.5rem;
+        --sec4ImgHeight: 17rem;
+        --likeTextH3: 1.2rem;
+    }
+
+    .section1 a {
+        margin-left: 2rem;
+    }
+
+    /* Section 2 */
+    .section2 {
+        width: 90%;
+    }
+
+    /* Section 3 */
+    .section3 {
+        gap: .6rem;
+        max-width: 90%;
+    }
+}
+
+@media (max-width: 390px) {
+
+    :root {
+        /* Section 3 */
+        --img1Width: 9rem;
+        --img2Width: 9rem;
+        --img3Width: 100%;
+        --img3Height: 16rem;
+
+        /* Add to cart */
+       --padding-cart: 0rem;
+    }
+
+    /* Add to cart */
+
+    .overlay-cart {
+      justify-content: center;
+    }
+
+    .cart-card {
+        transform: scale(.9);
+    }
+
+    .main-container .header > div {
+        margin: 0 1rem 0 0;
+    }
+
+}

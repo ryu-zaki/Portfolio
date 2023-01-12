@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infinite Storm</title>
+    <link href="../movies.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+</head>
+
+<body>
+<div class="bg-img bgImg2"></div>
+<div class="overlay-img overImg2">
+  <div class="navigation">
+    <h3>J & <span>Global</span></h3>
+    <button id="menu2" class="menuToggle">Menu</button>
+    <ul data-visibility data-toggle="true">
+        <li data-toggle-cross class="xToggle">X</li>
+        <li><a class="nav" href="../index.html">Home</a></li>
+        <li><a class="nav" data-logout href="../index.html">Logout</a></li>
+        <li><a class="nav" data-genres href="../page2.html">Back</a></li>
+    </ul>     
+</div>
+
+<div class="movie-anim">
+  <header>
+    <h2 class="main-title">Infinite Storm</h2>
+  </header>
+ <main>
+<div class="video-container video-con4">
+  <div class="direct-video">
+   <video controls>
+     <source src="Iron Man 3 (2013) [1080p]/Iron.Man.3.2013.1080p.BluRay.x264.YIFY.mp4" type="video/mp4">
+     video element is not supported on your browser
+   </video>
+   <div class="buttons-features">
+     <button type="button">Download</button>
+     <button data-copy type="button">Copy the link</button>
+   </div>
+  </div>
+
+  <div class="synopsis-container">
+    <h3>Film Synopsis</h3>
+    <p id="para">As an experienced climber ascends Mount Washington, she turns back before she reaches the summit as a huge blizzard approaches. However, on her way down, she encounters a stranded man and takes it upon herself to get them both down the mountain before nightfall arrives and they succumb to the elements.</p>
+    <button data-open>Leave a comment</button>
+  </div>
+</div>
+ </main>
+</div>
+
+ <!-- modal comment -->
+
+<div data-visibility="false" class="comment-modal">
+  <div class="text-modal">
+    <h2>Please write something about the film</h2>
+    <textarea placeholder="Enter your comments here"></textarea>
+    <div>
+    <button type="submit">Send This Comment</button>
+    <button data-close type="button">Exit</button>
+  </div>
+  </div>
+</div>
+<script>
+const openBtn = document.querySelector('[data-open]');
+const closeBtn = document.querySelector('[data-close]');
+const mainContainer = document.querySelector('div.comment-modal');
+const copyBtn = document.querySelector('[data-copy]');
+
+openBtn.addEventListener('click', () => {
+  mainContainer.setAttribute('data-visibility', 'true');
+})
+
+closeBtn.addEventListener('click', () => {
+  mainContainer.setAttribute('data-visibility', 'false');
+})
+
+copyBtn.addEventListener('click', () => {
+  url.select();
+  document.execCommand('copy');
+  
+})
+
+/* menu button */
+const visibility = document.querySelector('[data-visibility]');
+const crossBtn = document.querySelector('[data-toggle-cross]');
+const mainBtn = document.getElementById('menu2');
+
+mainBtn.addEventListener('click', () => {
+   visibility.setAttribute('data-toggle', 'false');  
+})
+
+crossBtn.addEventListener('click', () => {
+  visibility.setAttribute('data-toggle', 'true'); 
+})
+
+/* Logout functionality */
+const logoutBtn = document.querySelector('[data-logout]');
+
+logoutBtn.addEventListener('click', () => {
+  
+  if (confirm('Are you sure you want to log out?') == false) {
+    logoutBtn.setAttribute('href', '#');
+    return;
+  }
+  
+  localStorage.removeItem('checker');
+  logoutBtn.setAttribute('href', '../index.html');
+  return;
+})
+</script>
+</div>
+
+<footer>
+  <div>
+    <h3>J & Global corporation</h3>
+    <p>This project was created by Jhonwell Española</p>
+    <p style="font-size: .9rem; opacity: .9;">Thank you for visiting us!</p>
+  </div>
+</footer>
+</body>
+</html>

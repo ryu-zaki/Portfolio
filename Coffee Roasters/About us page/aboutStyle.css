@@ -1,0 +1,344 @@
+:root {
+    /* Font size */
+    --aboutH1: 2.4rem;
+    --aboutP: .97rem;
+    --comH2: 2.5rem;
+    --comP: 1rem;
+    --qualityH2: 2.58rem;
+    --qualityP: .97rem;
+    --headquartersH2: 1.5rem;
+
+    /* Width */
+    --aboutWidthP: 28rem;
+    --comImgWidth: 30rem;
+    --qualityWidth: 42%;
+    --headquartersWidth: 86%;
+    --countryWidth: 80%;
+    --countryH2: 1.8rem;
+
+    /* Height */
+    --comImgHeight: 36rem;
+}
+
+body .main-container {
+    row-gap: 14rem;
+}
+
+.main-container .header-img,
+.commitment,
+.quality,
+.headquarters-section {
+    animation: intro 1.5s;
+}
+
+.main-container .header-img .about-img {
+    background-image: url('https://images.pexels.com/photos/10973388/pexels-photo-10973388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 28rem;
+    border-radius: 10px;
+    color: var(--light);
+    position: relative;
+
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 4rem;
+}
+
+.main-container .header-img .about-img h1 {
+    font-size: var(--aboutH1);
+}
+
+.main-container .header-img .about-img p {
+    width: var(--aboutWidthP);
+    font-size: var(--aboutP);
+    line-height: 1.7;
+}
+
+
+/* Our Commitment section */
+
+.commitment {
+    display: flex;
+    justify-content: center;
+    column-gap: 8rem;
+    margin-bottom: 2rem;
+}
+
+.commitment img {
+    width: var(--comImgWidth);
+    height: var(--comImgHeight);
+    border-radius: 10px;
+}
+
+.commitment .commitment-text {
+    width: 41%;
+    align-self: center;
+}
+
+.commitment .commitment-text  h2 {
+    font-size: var(--comH2);
+    color: var(--dark);
+    margin-bottom: 2rem;
+}
+
+.commitment .commitment-text p {
+    font-size: var(--comP);
+    line-height: 1.7;
+    opacity: .7;
+}
+
+/* quality section */
+
+.quality {
+    display: flex;
+    color: var(--light);
+    background-color: var(--dark);
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    gap: 7.5rem;
+}
+
+.quality .quality-text {
+    width: var(--qualityWidth);
+}
+
+.quality .quality-text p {
+    line-height: 1.8;
+    font-size: var(--qualityP);
+    opacity: .9;
+}
+
+.quality .quality-text h2 {
+    font-size: var(--qualityH2);
+    margin-bottom: 1.6rem;
+}
+
+.quality .quality-img {
+    width: 34%;
+    transform: translateY(-5rem);
+}
+
+.quality .quality-img img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+/* Country Section */
+
+.headquarters-section {
+    width: var(--headquartersWidth);
+    align-self: center;
+    color: var(--dark);
+}
+
+.headquarters-section > h2 {
+    font-size: var(--headquartersH2);
+    margin-top: -4rem;
+    margin-bottom: 4rem;
+    opacity: .6;
+}
+
+.headquarters-section .country-container {
+    display: flex;
+    width: var(--countryWidth);
+    justify-content: space-between;
+}
+
+.country h2 {
+    font-size: var(--countryH2);
+    margin-bottom: 1.4rem;
+    margin-top: 2.5rem;
+    opacity: .9;
+}
+
+.country li {
+    list-style-type: none;
+    line-height: 1.8;
+    opacity: .9;
+    font-weight: 100;
+}
+
+/* Media Queries */
+@media screen and (max-width: 1200px) {
+
+    :root {
+        --comH2: 2rem;
+        --comP: .88rem;
+        --comImgWidth: 28rem;
+        --comImgHeight: 33rem;
+
+        /* Quality */
+        --qualityH2: 2rem;
+
+    }
+
+    .commitment {
+        gap: 4rem;
+        margin-block: 5rem;
+    }
+
+    .commitment img {
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .commitment .commitment-text {
+        width: 50%;
+    }
+
+    /* Quality */
+
+    body .main-container {
+        row-gap: 6rem;
+    }
+
+    .quality {
+        height: 35rem;
+
+    }
+
+    .quality .quality-img {
+        transform: translateY(0);
+    }
+  
+}
+
+@media screen and (max-width: 1026px) {
+    :root {
+        --comImgWidth: 17.3rem;
+        --comImgHeight: 28rem; 
+
+        /* Quality */
+        --qualityWidth: 90%;
+
+        /* Country Section */
+        --headquartersWidth: 100%;
+        --countryWidth: 90%;
+    }
+
+    .commitment .commitment-text {
+        width: 60%;
+    }
+
+    /* Quality */
+
+    .quality {
+        flex-direction: column-reverse;
+        margin-top: 8rem;
+        gap: 0;
+    }
+
+    .quality .quality-img {
+        width: 89%;
+        max-height: 25rem;
+        transform: translateY(-6rem);
+    }
+
+    .quality .quality-img img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        object-position: bottom;
+    }
+
+    .quality .quality-text {
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+
+    /* Country Section */
+
+    .headquarters-section > h2 {
+        margin-top: 2rem;
+    }
+}
+
+
+
+@media screen and (max-width: 770px) {
+    :root {
+        /* Header-img Section */
+        --aboutH1: 2rem;
+        --aboutWidthP: 90%;
+
+        /* Country Section*/
+        --countryWidth: 100%;
+    }
+
+    .main-container .header-img .about-img h1 {
+        text-align: center;
+    }
+
+    .main-container .header-img .about-img p {
+        text-align: center;
+        margin-inline: auto;
+    }
+
+    .main-container .header-img .about-img {
+        padding-left: 0;
+    }
+
+
+    /* Commitment */
+
+    .commitment {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .commitment .commitment-text {
+        width: 100%;
+        text-align: center;
+    }
+
+    .commitment img {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Country Section */
+
+    .headquarters-section > h2 {
+        text-align: center;
+    }
+
+
+
+    .headquarters-section .country-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 5rem;
+    }
+}
+
+@media screen and (max-width: 420px) {
+
+    :root {
+        --qualityH2: 1.8rem;
+    }
+
+    body .main-container {
+        gap: 2rem;
+    }
+
+    .quality {
+        row-gap: 3rem;
+    }
+
+    .quality .quality-img {
+        width: 89%;
+        height: 10rem;
+        max-height: 25rem;
+        transform: translateY(-1rem);
+    }
+
+    .quality .quality-img {
+        width: 80%;
+    }
+}

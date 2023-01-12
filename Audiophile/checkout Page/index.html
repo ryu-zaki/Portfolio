@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../Headphones Page/headstyle.css" rel="stylesheet">
+    <link href="../style.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link href="../Headphones Page/x99.css" rel="stylesheet">
+    <script src="../script.js" defer></script>
+    <script src="https://kit.fontawesome.com/5a2d8f25c5.js" crossorigin="anonymous"></script>
+    <script src="check.js" defer></script>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <title>Audiophile</title>
+    <style>
+      .cart-container {
+        display: none;
+      }
+    </style>
+</head>
+<body>
+<!-- Navigations -->
+<div class="main-container">
+    <div class="introduction">
+      <div class="header">
+          <h2>audiophile</h2>
+          <ul data-visibility="false">
+            <i class="fa-solid fa-x"></i>
+              <li class="navs"><a href="../index.html">HOME</a></li>
+              <li class="navs"><a href="../Headphones Page/index.html">HEADPHONES</a></li>
+              <li class="navs"><a href="../Speakers Page/index.html">SPEAKERS</a></li>
+              <li class="navs"><a href="../Earphones Page/index.html">EARPHONES</a></li>
+          </ul>
+          <div>
+            <div class="cart-container">
+              <i class="fa-solid fa-cart-shopping"></i><span data-count></span>
+            </div>
+            <i data-menu class="fa-solid fa-bars"></i>
+          </div>
+      </div>
+    </div>
+  </div>
+
+<!-- Add to Cart modal -->
+<div class="overlay-cart">
+    <div class="cart-card">
+      <button data-x-add><h3>X</h3></button>
+      <div class="first-text">
+        <h2>Your products:</h2>
+      </div>
+
+      <div class="img-main-container">
+        <div class="img-section1">
+          <div class="inner-img">
+            <img src="../Headphones Page/img1.jpg" width="25" height="25" alt="headphone">
+            <div>
+              <p>XX99 Mark II Headphones</p>
+              <span><span data-product-price1>₱177,360.95</span><span data-times-product1></span></span>
+            </div>
+          </div>
+          <div class="delete-product">
+            <span data-delete1>delete</span>
+          </div>
+        </div>
+
+        <div class="img-section2">
+            <div class="inner-img">
+              <img src="../Headphones Page/img2.jpg" width="25" height="25" alt="headphone">
+              <div>
+                <p>XX99 Mark I Headphones</p>
+                <span><span data-product-price2>₱102,628.83</span><span data-times-product2></span></span>
+              </div>
+            </div>
+            <div class="delete-product">
+              <span data-delete2>delete</span>
+            </div>
+          </div>
+
+          <div class="img-section3">
+            <div class="inner-img">
+              <img src="../Headphones Page/xx59.jpg" width="25" height="25" alt="headphone">
+              <div>
+                <p>XX59 HEADPHONES</p>
+                <span><span data-product-price3>₱50,410.08</span><span data-times-product3></span></span>
+              </div>
+            </div>
+            <div class="delete-product">
+              <span data-delete3>delete</span>
+            </div>
+          </div>
+
+          <!-- Speakers add to cart -->
+        <div class="img-sectionSpeaker1">
+          <div class="inner-img">
+            <img src="../Speakers Page/Speakers_Images/image-zx9.598799e2.jpg" width="25" height="25" alt="speaker">
+             <div>
+              <p>ZX9 SPEAKER</p>
+            <span><span data-product-priceS1>₱264,910.50</span><span data-times-productS1></span></span>
+          </div>
+        </div>
+        <div class="delete-product">
+          <span data-deleteS1>delete</span>
+        </div>
+      </div>
+
+      <div class="img-sectionSpeaker2">
+        <div class="inner-img">
+          <img src="../Speakers Page/Speakers_Images/img2.jpg" width="25" height="25" alt="headphone">
+          <div>
+            <p>XX59 HEADPHONES</p>
+            <span><span data-product-priceS2>₱50,410.08</span><span data-times-productS2></span></span>
+          </div>
+        </div>
+        <div class="delete-product">
+          <span data-deleteS2>delete</span>
+        </div>
+      </div>
+
+      <!-- Earphone Section -->
+      <div class="img-sectionEarphone1">
+        <div class="inner-img">
+          <img src="../Earphones Page/main_image.jpg" width="25" height="25" alt="headphone">
+          <div>
+            <p>YX1 EARPHONES</p>
+            <span><span data-product-priceE1>₱33,473.62</span><span data-times-productE1></span></span>
+          </div>
+        </div>
+        <div class="delete-product">
+          <span data-deleteE1>delete</span>
+        </div>
+      </div>  
+
+      </div>
+      
+      <div class="total-section">
+        <h2>TOTAL</h2>
+        <b><span data-price-total>0</span></b>
+      </div>
+      <button class="checkout-btn">CHECKOUT</button>
+    </div>
+  </div>
+  
+  <!-- Form Section -->
+  <div class="content-container">
+    <!-- Input section -->
+    <section>
+      <form>
+        <!-- Billing details section -->
+        <section class="billing-section">
+          <h3 class="info-title">Billing Details</h3>
+          <div>
+            <div>
+              <section class="input-field">
+                <span><label>Name</label><i class="invalid-msg">Name required</i></span>
+                <input data-name type="text" placeholder="Jhonwell Española">
+              </section>
+              <section class="input-field">
+                <span><label>Phone Number</label><i class="invalid-msg">Phone Number required</i></span>
+                <input data-number type="tel" maxlength="12" placeholder="639514406065">
+              </section> 
+            </div>
+            <div>
+              <section class="input-field">
+                <span><label>Email</label><i class="invalid-msg">Email Required</i></span>
+                <input data-email type="email" placeholder="Sample@gmail.com">
+            </section>
+            </div>
+          </div>
+        </section>
+
+        <!-- Shipping Info -->
+        <section class="shipping-container">
+          <h3 class="info-title">Shipping Info</h3>
+          <div class="inner-shipping">
+            <div class="address-container">
+              <span><label>Address</label><i class="invalid-msg">address cannot be empty</i></span>
+              <input data-address type="text" placeholder="Input your address">
+            </div>
+            <div class="address-details">
+              <div>
+               <div class="input-field">
+                <span><label>ZIP</label><i class="invalid-msg">ZIP cannot be empty</i></span>
+                <input data-zip maxlength="4" type="text" placeholder="1102">
+               </div>
+               <div class="input-field">
+                <span><label>Country</label><i class="invalid-msg">Country cannot be empty</i></span>
+                <input data-country type="text" placeholder="Enter your Country">
+               </div>
+              </div> 
+              <div class="input-field">
+                <span><label>City</label><i class="invalid-msg">City required</i></span>
+                <input data-city type="text" placeholder="Enter your City">
+              </div>
+            </div>
+          </div>
+          
+        </section>
+
+        <!-- Payment Section -->
+        <section class="payment-container">
+          <div class="title-msg">
+            <h3 class="info-title">Payment Details</h3>
+            <i class="invalid-msg">select a payment method</i>
+          </div>
+          <section>
+            <section class="payment-wrapper">
+              <h4>PAYMENT METHOD</h4>
+            <section class="payment-options">
+              <label data-e>
+                <input type="radio" name="payment-option" value="e-money"><span>e-Money</span>
+              </label>
+              <label data-cod>
+                <input type="radio" name="payment-option" value="cod"><span>Cash on Delivery</span>
+              </label>
+            </section>
+            </section>
+            <section class="methods-container">
+              <div class="results-container">
+                <section class="first-container">
+                  <label>E-money Number</label>
+                  <input data-eInput type="number" placeholder="89578*****">
+                 </section>
+                 <section class="first-container">
+                   <label>E-money Pin</label>
+                   <input data-cod-input  type="text" placeholder="E-MONEY PIN">
+                 </section>
+              </div>
+
+              <div class="cod-container">
+                <i class="fa-solid fa-dollar-sign"></i>
+                <p>The ‘Cash on Delivery’ option enables you to pay in cash when our delivery courier arrives at your residence. Just make sure your address is correct so that your order will not be cancelled.</p>
+              </div>
+            </section>
+          </section>
+        </section>
+      </form>
+    </section>
+
+    <!-- Summary section -->
+    <section class="summary-container">
+      <h2>Summary</h2>
+      <section class="product">
+        <!-- Headphones product -->
+        <section data-head1>
+          <div>
+            <img width="25" height="25" src="../Headphones Page/img1.jpg" alt="">
+          <div>
+            <h4>XX99 MARK II HEADPHONES</h4>
+            <p>₱177,360.95</p>
+          </div>
+          </div>
+          <span></span>
+        </section>
+
+        <section data-head2>
+          <div>
+            <img width="25" height="25" src="../Headphones Page/img2.jpg" alt="">
+          <div>
+            <h4>XX99 MARK I HEADPHONES</h4>
+            <p>₱102,628.83</p>
+          </div>
+          </div>
+          <span>x1</span>
+        </section>
+
+        <section data-head3>
+          <div>
+            <img width="25" height="25" src="../Headphones Page/xx59.jpg" alt="">
+          <div>
+            <h4>XX59 HEADPHONES</h4>
+            <p>₱50,410.08</p>
+          </div>
+          </div>
+          <span>x1</span>
+        </section>
+
+        <!-- Speakers Products -->
+        <section data-speaker1>
+          <div>
+            <img width="25" height="25" src="../Speakers Page/Speakers_Images/image-zx9.598799e2.jpg" alt="">
+          <div>
+            <h4>ZX9 SPEAKER</h4>
+            <p>₱264,910.50</p>
+          </div>
+          </div>
+          <span>x1</span>
+        </section>
+
+        <section data-speaker2>
+          <div>
+            <img width="25" height="25" src="../Speakers Page/Speakers_Images/img2.jpg" alt="">
+          <div>
+            <h4>ZX7 SPEAKER</h4>
+            <p>₱205,566.85</p>
+          </div>
+          </div>
+          <span>x1</span>
+        </section>
+
+        <!-- Earphones Section  -->
+        <section data-earphone1>
+          <div>
+            <img width="25" height="25" src="../Earphones Page/main_image.jpg" alt="">
+          <div>
+            <h4>YX1 EARPHONES</h4>
+            <p>₱33,473.62</p>
+          </div>
+          </div>
+          <span>x1</span>
+        </section>
+
+      </section>
+      <section class="computations">
+        <div>
+          <h3 class="list-title">TOTAL</h3>
+          <h3 data-total>₱0.00</h3>
+        </div>
+        <div>
+          <h3 class="list-title">Shipping</h3>
+          <h3>₱380.00</h3>
+        </div>
+        <div>
+          <h3 class="list-title">VAT(TAX INCLUDED)</h3>
+          <h3>₱650.00</h3>
+        </div>
+        <div>
+          <h3 class="list-title">GRAND TOTAL</h3>
+          <h3 data-grand>₱0.00</h3>
+        </div>
+      </section>  
+      <button class="payment-btn">Continue & Pay</button>
+    </section>
+  </div>
+
+  <!-- Payment modal -->
+  <div class="payment-modal-container">
+     <div class="modal-card-payment">
+      <i class="fa-regular fa-circle-check"></i>
+      <div class="summary-info">
+        <h2>Thank you <br>for your order</h2>
+        <p>You will receive an email confirmation shortly.</p>
+        <div class="order-products">
+            <section data-products>
+              <!-- <div>
+              <div>
+                <img width="25" height="25" src="../Headphones Page/img1.jpg" alt="">
+              <div>
+                <h4>XX99 MARK II HEADPHONES</h4>
+                <p>₱177,360.95</p>
+              </div>
+              </div>
+              <span>x1</span>
+              </div> -->
+
+              <div><p>and <span>0</span> other item(s)</p></div>
+            </section>
+            <section>
+              <h4>Grand Total</h4>
+              <h4 data-grandTotal></h4>
+            </section>
+        </div>
+      </div>
+      <a data-back-home href="../index.html">Back to Home</a>
+     </div>
+  </div> 
+
+
+  <footer>
+    <div class="footer-headings">
+      <h2>audiophile</h2>
+      <p>Audiophile is an all in one stop to fulfill your audio needs. We're a small team of music lovers and sound specialists who are devoted to helping you get the most out of personal audio. Come and visit our demo facility - we’re open 7 days a week.</p>
+      <p>This project was created by Jhonwell Española.</p>
+    </div>
+     
+    <div class="footer-navigations">
+      <ul>
+        <li class="navs"><a href="../index.html">HOME</a></li>
+        <li class="navs"><a href="../Headphones Page/index.html">HEADPHONES</a></li>
+        <li class="navs"><a href="../Speakers Page/index.html">SPEAKERS</a></li>
+        <li class="navs"><a href="../Earphones Page/index.html">EARPHONES</a></li>
+      </ul>
+      <div class="navigations">
+        <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>  
+</body>
+</html>
