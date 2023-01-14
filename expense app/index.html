@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense App</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+<div class="whole-app">
+    <div class="text-section">
+      <h2>Expense Tracker</h2>
+      <p>Add a new item</p>
+    </div>
+     <div class="input-section">
+      <div class="inner-input">
+       <label for="name">Name : <input type="text" id="name" data-name-value placeholder="Name of your Expense"></label>
+       <label for="date">Date : <input type="date" data-date-value id="date"></label>
+       <label for="amount">Amount :<input type="text" data-amount-value id="amount" placeholder="Enter the amount"></label>
+      </div>
+       <button data-add-button id="add-btn">Add Expense</button>
+     </div>
+    <div class="table-container">
+     <table>
+        <tr class="table-title">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+        <tbody id="tbody">
+        <!-- <tr>
+          <td>Mcdonalds</td>
+          <td>june 6, 2021</td>
+          <td>$56<button class="btn-cross">&#10005;</button></td>
+        </tr>  -->
+      </tbody>
+     </table>
+    </div>
+</div>
+</body>
+</html>

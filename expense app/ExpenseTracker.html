@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense App</title>
+    <style>
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+    --headFs: calc(2rem + 1vw);
+    --subHeadFs: calc(.7rem + .7vw);
+    --labelFs: ;
+    --tableHeadFs: 1rem;
+    --tableDataFs: ;
+    --buttonFs: 1.2rem;
+    --lightColor: #f4f4f4;
+    --greenColor: #2ecc71;
+}
+
+body {
+    background-color: #222;
+}
+
+.whole-app .text-section h2 {
+    text-align: center;
+    font-weight: 200;
+    font-size: var(--headFs);
+    margin: 1.7rem auto;
+    color: var(--lightColor);
+}
+
+.whole-app .text-section p {
+    text-align: center;
+    font-size: var(--subHeadFs);
+    font-weight: 200;
+    margin-bottom: 6rem;
+    position: relative;
+    color: var(--greenColor);
+}
+
+
+.input-section .inner-input label {
+    color: var(--lightColor);
+}
+
+.input-section .inner-input label > input {
+    appearance: none;
+    outline: 1px solid #000;
+    border: none;
+    background-color: #f4f4f4;
+    padding: .6em 1.2em;
+    margin-left: 1em;
+    height: 2em;
+    border-radius: 10px;
+    width: 12em;
+}
+
+.input-section .inner-input {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+
+.input-section button {
+    appearance: none;
+    outline: none;
+    border: none;
+    display: block;
+    margin-inline: auto;
+    margin-top: 5rem;
+    padding: .8rem;
+    color: #f4f4f4;
+    background-color: #34495e;
+    transition: all .3s;
+    font-size: var(--buttonFs);
+}
+
+.input-section button:hover {
+    cursor: pointer;
+    background-color: #2ecc71;
+}
+
+.input-section button:active {
+    transform: scale(.9);
+}
+
+
+.whole-app .table-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+    
+}
+
+.table-container table {
+    margin-bottom: 2em;
+}
+
+table th {
+    text-align: left;
+    font-weight: 600;
+    font-size: var(--tableHeadFs);
+    padding: .7em 1em;
+    color: var(--lightColor);
+    background-color: #2c3e50;
+}
+
+table td {
+    background-color: #95a5a6;
+    padding: 1em;
+    color: #000;
+
+}
+
+.table-container table {
+    width: 70%;
+}
+
+table, th, td {
+    border: 1px solid var(--lightColor);
+    border-collapse: collapse;
+}
+
+.btn-cross {
+    appearance: none;
+    outline: none;
+    border: none;
+    float: right;
+    padding: .2em;
+    color: var(--lightColor);
+    background-color: crimson;
+    box-shadow: 1px 0px 4px 0px #000;
+    padding: .3em .4em;
+}
+
+.btn-cross:hover {
+    cursor: pointer;
+}
+
+@media (max-width: 630px) {
+
+    :root {
+        --buttonFs: .8em;
+    }
+    .table-container table {
+        width: 96%;
+    }
+}
+    </style>
+</head>
+<body>
+<div class="whole-app">
+    <div class="text-section">
+      <h2>Expense Tracker</h2>
+      <p>Add a new item</p>
+    </div>
+     <div class="input-section">
+      <div class="inner-input">
+       <label for="name">Name : <input type="text" id="name" data-name-value placeholder="Name of your Expense"></label>
+       <label for="date">Date : <input type="date" data-date-value id="date"></label>
+       <label for="amount">Amount :<input type="text" data-amount-value id="amount" placeholder="Enter the amount"></label>
+      </div>
+       <button data-add-button id="add-btn">Add Expense</button>
+     </div>
+    <div class="table-container">
+     <table>
+        <tr class="table-title">
+            <th>Name</th>
+            <th>Date</th>
+            <th>Amount</th>
+        </tr>
+        <tbody id="tbody">
+        <!-- <tr>
+          <td>Mcdonalds</td>
+          <td>june 6, 2021</td>
+          <td>$56<button class="btn-cross">&#10005;</button></td>
+        </tr>  -->
+      </tbody>
+     </table>
+    </div>
+</div>
+<script>
+window.addEventListener('load', () => {
+    //variables for inputs and button
+
+    const NAME = document.querySelector('[data-name-value]');
+    const DATE = document.querySelector('[data-date-value]');
+    const AMOUNT = document.querySelector('[data-amount-value]');
+    const ADDBTN = document.querySelector('[data-add-button]');
+
+    
+
+    //adding an event listeners in my Button
+
+    ADDBTN.addEventListener('click', () => {
+
+        
+
+        //getting the values of these elements
+    
+        const nameValue = NAME.value;
+        const dateValue = DATE.value;
+        const amountValue = AMOUNT.value;
+
+        //The validation:
+
+       if (nameValue === "" || dateValue === "" || amountValue === "") {
+        alert('Please complete the required information.');
+        return;
+       }
+
+        //creating elements
+        
+        const tBody = document.getElementById('tbody');
+        const tRow = document.createElement('tr');
+        const tData1 = document.createElement('td');
+        const tData2 = document.createElement('td');
+        const tData3 = document.createElement('td');
+        const tButton = document.createElement('button');
+        tButton.classList.add('btn-cross');
+        tButton.innerHTML = "&#10005;";
+        tData1.innerHTML = nameValue;
+        tData2.innerHTML = dateValue;
+        tData3.innerHTML = amountValue
+        tData3.appendChild(tButton);
+        tRow.appendChild(tData1);
+        tRow.appendChild(tData2);
+        tRow.appendChild(tData3);
+        tBody.appendChild(tRow);
+        
+        //functionality of table Button
+
+        tButton.addEventListener('click', () => {
+            tBody.removeChild(tRow);
+        })
+
+        NAME.value = "";
+        DATE.value = "";
+        AMOUNT.value = "";
+
+    })
+    
+})    
+</script>
+</body>
+</html>

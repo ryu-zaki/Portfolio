@@ -1,0 +1,240 @@
+
+:root {
+    --headFs: calc(5rem + .8vw);
+    --subHeadFs: calc(2.2rem + .7vw);
+    --inputFs: calc(1rem + .8vw);
+    --subInputFs: calc(.8rem + .8vw);
+    --buttonFs: calc(1rem + .8vw);
+    --subButtonFs: calc(.7rem + .8vw);
+    --primary: #2ed573;
+    --secondary: #F79F1F;
+    --dark:  #222;
+    --light: #eee;
+    --darkdark: #000;
+}
+ 
+* {
+    font-family: sans-serif, monospace;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    letter-spacing: 1px;
+}
+
+body {
+    background-image: url(https://images.pexels.com/photos/6690924/pexels-photo-6690924.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: auto;
+}
+
+.whole-container {
+    width: 100%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: all .3s;
+    margin-top: 2em;
+}
+
+.whole-container .whole-app {
+    background-color: rgba(0, 0, 0, .6);
+    padding: 2em;
+    backdrop-filter: blur(.2em); 
+    margin-bottom: 5em;
+}
+
+button, input {
+    appearance: none;
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.whole-container .whole-app .user-input {
+    margin-bottom: 2rem;
+}
+
+.whole-container .whole-app .user-input h1 {
+   color: var(--light);
+   font-size: var(--headFs);
+   margin-bottom: 2rem;
+   text-align: center;
+}
+
+.whole-container .whole-app .user-input .input-con {
+    display: flex;
+    gap: 1em;
+}
+
+.whole-container .whole-app .user-input .input-con input {
+    height: 2.3rem;
+    width: 80%;
+    font-size: var(--inputFs);
+    font-weight: normal;
+    color: var(--light);
+    background-color: var(--dark);
+    padding: 1.2em;  
+}
+
+.input-con input::placeholder {
+    font-size: 1rem;
+    color: var(--secondary);
+    opacity: .7;
+}
+
+.input-con input:focus {
+    outline: 1px solid var(--light);
+}
+
+span {
+    color: var(--secondary);
+}
+
+.whole-container .whole-app .user-input .input-con button {
+    color: var(--secondary);
+    background-color: var(--darkdark);
+    font-size: var(--buttonFs);
+    padding: 0 1rem;
+    transition: all .2s;
+}
+
+.whole-container .whole-app .user-input .input-con button:hover {
+    background-color: var(--primary);
+    color: var(--light);
+    cursor: pointer;
+}
+
+/* ouput section: */
+
+.output h2 {
+    color: var(--light);
+    font-size: var(--subHeadFs);
+    margin-bottom: .6em;
+}
+
+.output > button {
+    font-size: var(--subButtonFs);
+    color: var(--light);
+    margin-bottom: 1em;
+    transition: all .2s;
+}
+
+.output > button:hover {
+    cursor: pointer;
+}
+
+.output > button:active {
+    transform: scale(.9);
+}
+
+.taskList .task {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+}
+
+.taskList .task input:not(:read-only) {
+    background-color: var(--dark);
+    width: 60%;
+    padding: .7rem 1rem;
+    font-size: var(--SubInputFs);
+    border-radius: 10px;
+    font-weight: normal;
+    color: var(--light);
+    text-transform: capitalize;
+}
+
+.taskList .task input[data-check] {
+    background-color: #009432;
+    width: 60%;
+    padding: .7rem 1rem;
+    font-size: var(--SubInputFs);
+    border-radius: 10px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: all .3s;
+    color: var(--light);
+}
+
+.taskList .task input:focus {
+    outline: 1px solid var(--light);
+}
+
+.taskList .task input {
+    background-color: #ddd;
+    width: 60%;
+    padding: .7rem 1rem;
+    font-size: var(--SubInputFs);
+    border-radius: 10px;
+    font-weight: normal;
+    text-transform: capitalize;
+    transition: all .3s;
+}
+
+.output .taskList .task .content-btn {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+   
+}
+
+.output .taskList .task .content-btn > button {
+    font-size: var(--subButtonFs);
+    font-weight: normal;
+    color: var(--light);
+    transition: all .4s;
+}
+
+.output .taskList .task .content-btn > button:hover {
+    color: var(--secondary);
+    cursor: pointer;
+}
+/* for tablet devices */
+@media (max-width: 640px) {
+
+        :root {
+            --headFs: calc(3rem + .7vw);
+            --subHeadFs: calc(1.5rem + .7vw);
+            --inputFs: calc(.8rem + .8vw);
+            --subInputFs: calc(.6rem + .8vw);
+            --buttonFs: calc(.8rem + .8vw);
+            --subButtonFs: calc(.7rem + .8vw);
+        }
+
+        body {
+            height: 40em;
+        }
+} 
+
+/* for mobile devices */
+
+@media (max-width: 430px) {
+
+    :root {
+        --headFs: calc(2rem + .7vw);
+        --subHeadFs: calc(1.5rem + .7vw);
+        --inputFs: calc(.8rem + .8vw);
+        --subInputFs: calc(.6rem + .8vw);
+        --buttonFs: calc(.8rem + .8vw);
+        --subButtonFs: calc(.7rem + .8vw);
+    }
+
+    .whole-container .whole-app {
+        transform: scale(.9);
+    }
+
+    .output .taskList .task .content-btn {
+        display: flex;
+        align-items: center;
+        gap: .7em;
+       
+    }
+    
+    
+} 
+
+
