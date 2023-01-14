@@ -870,6 +870,7 @@ footer h5 {
 .resume div section > div > h3 {
     font-size: var(--subTitle);
     margin-bottom: 1em;
+    animation: slideText 1s .4s forwards;
 }
 
 .resume div section > div > h3.educ-title {
