@@ -1115,6 +1115,7 @@ footer h5 {
     align-self: flex-start;
     margin: 1em;
     margin-left: 2em;
+    cursor: pointer;
 }
 
 .calendar-main-container .sched-title {
